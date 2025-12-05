@@ -1,0 +1,22 @@
+Package: pourquoi
+Title: Verified Self-Consistency for Language Model Reasoning
+Version: 0.0.0.9000
+Authors@R: 
+    person("frank", "hull", , "frankiethull@proton.me", role = c("aut", "cre"))
+Description: Implements verified self-consistency voting to add robust, 
+    step-by-step reasoning to base language models that lack native reasoning 
+    capabilities. Generates multiple independent reasoning traces, extracts 
+    and normalizes answers for consensus voting, then uses a strong verification 
+    model to ensure correctness before returning final answers. Optimized for 
+    minimal API cost while maximizing reliability on mathematical, logical, 
+    and analytical tasks.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Imports: 
+    dplyr,
+    ellmer,
+    purrr,
+    stringr,
+    tibble
