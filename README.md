@@ -19,7 +19,7 @@ library(pourquoi)
 ```
 
 ``` r
-prompt <- "how do i say for what in French?"
+prompt <- "how do i say why in French?"
 
 pourquoi::why(
   prompt = prompt,
@@ -27,5 +27,17 @@ pourquoi::why(
   verifier = "ollama/qwen3:0.6b",
   n_traces = 3
 )
-#> [1] "CONFIRMED ANSWER: pour quoi"
+#> [1] "CONFIRMED ANSWER: pourquoi"
+```
+
+``` r
+prompt <- "how many r's are in the word Strawberry?"
+
+pourquoi::why(
+  prompt = prompt,
+  reasoner = "ollama/ministral-3:8b",
+  verifier = "ollama/ministral-3:3b",
+  n_traces = 5
+)
+#> [1] "3"
 ```
